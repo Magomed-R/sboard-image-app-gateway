@@ -1,0 +1,12 @@
+services:
+  cache:
+    container_name: gateway-cache
+    image: redis:8.0.2
+    ports:
+      - 127.0.0.1:6379:6379
+    networks:
+      - auth-service_network
+
+networks:
+  auth-service_network:
+    external: true
