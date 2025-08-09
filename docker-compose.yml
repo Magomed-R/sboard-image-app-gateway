@@ -1,9 +1,12 @@
 services:
-  cache:
-    container_name: gateway-cache
-    image: redis:8.0.2
+  service:
+    container_name: gateway_service
+    build:
+      context: .
+      dockerfile: Dockerfile
+    env_file: .env
     ports:
-      - 127.0.0.1:6379:6379
+      - 4000:${PORT:-4000}
     networks:
       - auth-service_network
 

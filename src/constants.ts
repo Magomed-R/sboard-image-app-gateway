@@ -1,0 +1,5 @@
+export const MINIO_STORAGE = 'MINIO_STORAGE'
+export const IMAGES_BUCKET = 'IMAGES_BUCKET'
+export const AUTH_PACKAGE = 'AUTH_PACKAGE'
+export const AUTH_PACKAGE_NAME = 'auth'
+export const AUTH_SERVICE_NAME = 'AuthService'
