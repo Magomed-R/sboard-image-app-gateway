@@ -7,9 +7,3 @@ services:
     env_file: .env
     ports:
       - 4000:${PORT:-4000}
-    networks:
-      - auth-service_network
-
-networks:
-  auth-service_network:
-    external: true
