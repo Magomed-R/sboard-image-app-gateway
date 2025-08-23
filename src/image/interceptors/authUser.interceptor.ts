@@ -13,9 +13,7 @@ export class AuthUserInterceptor implements NestInterceptor {
 
     if (!bearerToken)
       throw new UnauthorizedException({
-        message: 'BearerToken is not defined in authorization field (Headers)',
-        error: 'Unauthorized',
-        statusCode: 401
+        message: 'BearerToken is not defined in authorization field (Headers)'
       })
 
     const { user } = await firstValueFrom(this.authService.verify(bearerToken))
